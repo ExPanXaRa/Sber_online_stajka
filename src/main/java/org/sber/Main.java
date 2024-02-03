@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class FirstTask {
+public class Main {
 
     static void readFileInCity(String path, List<City> cities) {
         File file = new File(path);
@@ -37,7 +37,7 @@ public class FirstTask {
 
     public static void main(String[] args) {
         List<City> cities = new ArrayList<>();
-        String path = "src/main/resources/Задача ВС Java Сбер.csv";
+        String path = "src\\main\\resources\\Задача ВС Java Сбер.csv";
 
         readFileInCity(path, cities);
         Sort.sortBySity(cities);
