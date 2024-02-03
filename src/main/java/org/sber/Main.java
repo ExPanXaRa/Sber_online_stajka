@@ -35,16 +35,20 @@ public class Main {
         }
     }
 
+    static void writeCitys(List<City> cities) {
+        for (City city : cities) {
+            System.out.println(city.toString());
+        }
+    }
+
     public static void main(String[] args) {
         List<City> cities = new ArrayList<>();
         String path = "src\\main\\resources\\Задача ВС Java Сбер.csv";
 
         readFileInCity(path, cities);
-        Sort.sortBySity(cities);
-        Sort.sortByDistrictAndSity(cities);
 
-        for (City city : cities) {
-            System.out.println(city.toString());
-        }
+        City[] cityArray = cities.toArray(new City[cities.size()]);
+
+        Search.printIndexAndMaxPopulation(cityArray);
     }
 }

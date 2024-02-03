@@ -28,4 +28,8 @@ public class City {
     String getDistrict() {
         return district;
     }
+
+    int getPopulation() {
+        return population;
+    }
 }
