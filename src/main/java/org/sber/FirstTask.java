@@ -37,9 +37,11 @@ public class FirstTask {
 
     public static void main(String[] args) {
         List<City> cities = new ArrayList<>();
-        String path = "src\\main\\resources\\Задача ВС Java Сбер.csv";
+        String path = "src/main/resources/Задача ВС Java Сбер.csv";
 
         readFileInCity(path, cities);
+        Sort.sortBySity(cities);
+        Sort.sortByDistrictAndSity(cities);
 
         for (City city : cities) {
             System.out.println(city.toString());

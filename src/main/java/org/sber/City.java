@@ -7,7 +7,7 @@ public class City {
     private final int population;
     private final String foundation;
 
-    public City(String name, String region, String district, int population, String foundation) {
+    City(String name, String region, String district, int population, String foundation) {
         this.name = name;
         this.region = region;
         this.district = district;
@@ -19,5 +19,13 @@ public class City {
     public String toString() {
         return "City{name='" + name + "', region='" + region + "', district='" + district +
                 "', population=" + population + ", foundation='" + foundation + "'}";
+    }
+
+    String getName() {
+        return name;
+    }
+
+    String getDistrict() {
+        return district;
     }
 }
