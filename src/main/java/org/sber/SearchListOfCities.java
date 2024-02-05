@@ -1,7 +1,11 @@
 package org.sber;
 
-public class Search {
-    static int[] searchMaxPopulation(City[] cityArray) {
+public class SearchListOfCities {
+    static int[] MaxPopulation(City[] cityArray) {
+        if (cityArray == null) {
+            throw new NullPointerException("cityArray is null");
+        }
+
         int maxPopulation = 0;
         int indexOfMaxPopulation = -1;
         for (int i = 0; i < cityArray.length; i++) {
@@ -14,7 +18,11 @@ public class Search {
     }
 
     static void printIndexAndMaxPopulation(City[] cityArray) {
-        int[] result = searchMaxPopulation(cityArray);
+        if (cityArray == null) {
+            throw new NullPointerException("cityArray is null");
+        }
+
+        int[] result = MaxPopulation(cityArray);
         System.out.println("[" + result[0] + "] = " + result[1]);
     }
 }

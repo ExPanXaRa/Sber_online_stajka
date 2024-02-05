@@ -29,7 +29,13 @@ public class City {
         return district;
     }
 
+    String getRegion() {
+        return region;
+    }
+
     int getPopulation() {
         return population;
     }
+
+
 }
